@@ -20,6 +20,16 @@ The library follows the syllabus of a university course in numerical methods (*M
 
 ## Installation
 
+Install the latest version directly from GitHub:
+
+```bash
+pip install "git+https://github.com/GUELORD-MWENDERWA/numerical-analysis-toolkit.git"
+```
+
+Or download the wheel from the [latest release](https://github.com/GUELORD-MWENDERWA/numerical-analysis-toolkit/releases/latest) and run `pip install numkit-0.1.0-py3-none-any.whl`.
+
+For development:
+
 ```bash
 git clone https://github.com/GUELORD-MWENDERWA/numerical-analysis-toolkit.git
 cd numerical-analysis-toolkit
@@ -57,6 +67,22 @@ newton     root=2.094551481542 iterations=5
 ```
 
 This illustrates linear, superlinear (about 1.618) and quadratic convergence.
+
+## Results
+
+The figures below are produced by the library itself. Regenerate them with `pip install matplotlib && python docs/make_figures.py`.
+
+![Error per iteration for bisection, secant and Newton on x^3 - 2x - 5 = 0](docs/images/root_convergence.png)
+
+*Error per iteration for bisection, secant and Newton on x^3 - 2x - 5 = 0*
+
+![Euler, Heun and RK4 against the exact solution, and the measured orders of convergence](docs/images/ode_accuracy.png)
+
+*Euler, Heun and RK4 against the exact solution, and the measured orders of convergence*
+
+![Runge phenomenon with equispaced nodes, removed by Chebyshev nodes](docs/images/interpolation_runge.png)
+
+*Runge phenomenon with equispaced nodes, removed by Chebyshev nodes*
 
 ## Testing
 
